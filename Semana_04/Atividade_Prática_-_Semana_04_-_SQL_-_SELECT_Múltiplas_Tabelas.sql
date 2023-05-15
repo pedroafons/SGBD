@@ -1,0 +1,1 @@
+SELECT artistas.nome, estilos.estilo FROM artistas, estilos WHERE artistas.id = 8;

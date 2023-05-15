@@ -1,0 +1,39 @@
+-- Curso de Engenharia de Software - UniEVANGÉLICA
+-- Disciplina de Sistemas Gerenciadores de Banco de Dados
+-- Dev: Pedro Afonso Ferreira Leite
+
+-- Functions
+-- No MySQL uma function é uma função armazenada onde é possível passar parâmetros para ela e então retornar um valor.
+
+DELIMITER //
+CREATE FUNCTION nome_artista_capa(
+	album_id INT
+)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+	DECLARE nome_artista_capa VARCHAR(20);
+
+	IF album_id = 1 THEN
+	SET nome_artista_capa = 'Hayden Miller';
+	END IF;
+RETURN (nome_artista_capa);
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE FUNCTION class_album(
+	qnt_musicas INT
+)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+	DECLARE class_album VARCHAR(20);
+
+	IF qnt_musicas > 6 THEN
+	SET nome_artista_capa = 'Álbum';
+	ELSEIF qnt_musicas < 6 = 'EP';
+	END IF;
+	RETURN (class_album);
+END //
+DELIMITER ;
